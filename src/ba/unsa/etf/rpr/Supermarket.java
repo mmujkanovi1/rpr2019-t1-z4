@@ -23,12 +23,13 @@ public Artikl izbaciArtiklSaKodom(String kod) {
             if(artikli[i].getKod().equals(kod)) {
                 neki=artikli[i];
                 int j=i;
-                j++;
-                while(artikli[j]!=null) {
-                    artikli[j-1]=artikli[j];
+                //j++;
+                while(artikli[j+1]!=null) {
+                    artikli[j]=artikli[j+1];
 
                     j++;
                 }
+                artikli[j-1]=null;
 
                 /*
                 for(int j=i;j<artikli.length-2;j++) {

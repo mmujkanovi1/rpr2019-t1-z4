@@ -13,6 +13,8 @@ return true;
     }
 public Artikl[] getArtikli(){
 
+
+
 return artikli;
 
 
@@ -20,48 +22,33 @@ return artikli;
 
 
     public Artikl izbaciArtiklSaKodom(String s) {
-Artikl neki=new Artikl();
-//int i=0;
-/*while(artikli[i]!=null){
+        Artikl neki = new Artikl();
+        int i = 0;
+        while (artikli[i] != null) {
+            Artikl a = artikli[i];
+            if (s.equals(a.kod)) {
 
-    if(s==artikli[i].kod) {
 
+                int j = i;
+              //  if(artikli[j+1]==null) artikli[j]=null;
 
-    }
-}
+                while (artikli[j + 1] != null) {
+                    artikli[j] = artikli[j + 1];
+j++;
+                }
+                artikli[j-1]=null;
+                neki=artikli[i];
+                return artikli[i];
 
-*/
-
-for(int i=0;i<artikli.length-1;i++) {
-    Artikl a = artikli[i];
-    if (artikli[i] != null)
-        if ((s).equals(a.kod)) {
-            int j = i;
-            neki = artikli[i];
-            j++;
-            while (artikli[j] != null) {
-                artikli[j - 1] = artikli[j];
-                j++;
             }
 
 
-
-
-/*
-    neki=artikli[i];
-    for(int j=i;j<artikli.length-2;i++) {
-        artikli[j]=artikli[j+1];
-
-    }
-    //break;
-}
-
-artikli[artikli.length-1]=null;
-*/
+            i++;
         }
-}
-return neki;
-}
+        return neki;
+    }
+
+
 public int dajUkupnuCijenuArtikala() {
         int suma=0;
         for(int i=0;i<artikli.length-1;i++) {
