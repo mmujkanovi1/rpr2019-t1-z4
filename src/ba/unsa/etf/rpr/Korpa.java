@@ -30,8 +30,12 @@ return artikli;
 
 
                 int j = i;
-              //  if(artikli[j+1]==null) artikli[j]=null;
+                if(artikli[j+1]==null) {
+                    neki = artikli[j];
 
+                    artikli[j] = null;
+                    return neki;
+                }
                 while (artikli[j + 1] != null) {
                     artikli[j] = artikli[j + 1];
 j++;
@@ -52,7 +56,7 @@ j++;
 public int dajUkupnuCijenuArtikala() {
         int suma=0;
         for(int i=0;i<artikli.length-1;i++) {
-          //  if(artikli[i]==null) break;
+        //   if(artikli[i]==null) break;
             suma+=artikli[i].cijena;
         }
         return suma;

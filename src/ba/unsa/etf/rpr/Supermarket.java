@@ -10,37 +10,42 @@ Artikl[] artikli = new Artikl[1000];
      artikli[i]=a;
      return true;
     }
-public Artikl izbaciArtiklSaKodom(String kod) {
+public Artikl izbaciArtiklSaKodom(String s) {
 
-        Artikl neki=new Artikl();
+    Artikl neki = new Artikl();
+    int i = 0;
 
-        int i=0;
-        for(i=0;i<artikli.length-1;i++) {
+    while (artikli[i] != null) {
+        Artikl a = artikli[i];
+
+
+        if (s.equals(a.kod)) {
 
 
 
-            if(artikli[i]!=null)
-            if(artikli[i].getKod().equals(kod)) {
-                neki=artikli[i];
-                int j=i;
-                //j++;
-                while(artikli[j+1]!=null) {
-                    artikli[j]=artikli[j+1];
 
-                    j++;
-                }
-                artikli[j-1]=null;
+            int j = i;
+              if(artikli[j+1]==null) {
+                  neki = artikli[j];
 
-                /*
-                for(int j=i;j<artikli.length-2;j++) {
-                    artikli[j]=artikli[j+1];
-                }
+                  artikli[j] = null;
+                  return neki;
+              }
 
-                 */
+            while (artikli[j + 1] != null) {
+                artikli[j] = artikli[j + 1];
+                j++;
             }
-        }
-return neki;
+            artikli[j-1]=null;
+            neki=artikli[i];
+            return artikli[i];
 
+        }
+
+
+        i++;
+    }
+    return neki;
 }
 
 public Artikl[] getArtikli() {
