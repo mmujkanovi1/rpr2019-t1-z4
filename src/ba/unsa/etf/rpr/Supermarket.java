@@ -25,8 +25,9 @@ public Artikl izbaciArtiklSaKodom(String s) {
 
 
             int j = i;
+            neki=artikli[i];
               if(artikli[j+1]==null) {
-                  neki = artikli[j];
+                  //neki = artikli[j];
 
                   artikli[j] = null;
                   return neki;
@@ -37,8 +38,8 @@ public Artikl izbaciArtiklSaKodom(String s) {
                 j++;
             }
             artikli[j-1]=null;
-            neki=artikli[i];
-            return artikli[i];
+            //neki=artikli[i];
+           // return artikli[i];
 
         }
 
