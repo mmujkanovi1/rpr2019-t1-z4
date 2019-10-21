@@ -31,7 +31,7 @@ return artikli;
 
 
                 int j = i;
-                if(artikli[j+1]==null) {
+               /* if(artikli[j+1]==null) {
 
                     neki = artikli[j];
                    // artikli[j]=artikli[j+1];
@@ -39,11 +39,15 @@ return artikli;
                     artikli[j] = null;
                     return neki;
                 }
+
+                */
+
+
                 while (artikli[j + 1] != null) {
                     artikli[j] = artikli[j + 1];
-j++;
+                     j++;
                 }
-                artikli[j-1]=null;
+                //artikli[j-1]=null;
                 neki=artikli[i];
                // return artikli[i];
 
@@ -52,6 +56,7 @@ j++;
 
             i++;
         }
+        artikli[i-1]=null;
         return neki;
     }
 
