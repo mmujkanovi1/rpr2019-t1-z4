@@ -32,7 +32,9 @@ return artikli;
 
                 int j = i;
                 if(artikli[j+1]==null) {
+
                     neki = artikli[j];
+                   // artikli[j]=artikli[j+1];
 
                     artikli[j] = null;
                     return neki;
@@ -43,7 +45,7 @@ j++;
                 }
                 artikli[j-1]=null;
                 neki=artikli[i];
-                return artikli[i];
+               // return artikli[i];
 
             }
 
