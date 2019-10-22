@@ -10,48 +10,39 @@ Artikl[] artikli = new Artikl[1000];
      artikli[i]=a;
      return true;
     }
-public Artikl izbaciArtiklSaKodom(String s) {
+    public Artikl izbaciArtiklSaKodom(String s) {
 
-    Artikl neki = new Artikl();
-    int i = 0;
-
-    while (artikli[i] != null) {
-        Artikl a = artikli[i];
+        int brojac=0;
 
 
-        if (s.equals(a.kod)) {
+        Artikl neki = new Artikl();
+        int i = 0;
+       // if(artikli[i]==null) throw new IllegalArgumentException ("Nema artikala u supermarketu");
+        while (artikli[i] != null) {
+            Artikl a = artikli[i];
+            if (s.equals(a.kod)) {
 
 
+                int j = i;
+                neki=artikli[i];
 
+                while (artikli[j + 1] != null) {
+                    artikli[j] = artikli[j + 1];
+                    j++;
+                }
 
-            int j = i;
-            neki=artikli[i];
-             /*
-              if(artikli[j+1]==null) {
-                  //neki = artikli[j];
+              //  neki=artikli[i];
+//brojac++;
 
-                  artikli[j] = null;
-                  return neki;
-              }
-
-              */
-
-            while (artikli[j + 1] != null) {
-                artikli[j] = artikli[j + 1];
-                j++;
             }
-            //artikli[j-1]=null;
-            neki=artikli[i];
-           // return artikli[i];
 
+
+            i++;
         }
-
-
-        i++;
+  //      if(brojac==0) throw new IllegalArgumentException ("Nema artikla sa kodom u supermarketu");
+        artikli[i-1]=null;
+        return neki;
     }
-    artikli[i-1]=null;
-    return neki;
-}
 
 public Artikl[] getArtikli() {
         return artikli;
