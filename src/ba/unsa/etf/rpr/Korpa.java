@@ -4,7 +4,8 @@ public class Korpa {
 
    Artikl[] artikli=new Artikl[50];
   //  Artikl[] artikli=new Artikl[50];
-    public boolean dodajArtikl(Artikl a) {int i=0;
+    public boolean dodajArtikl(Artikl a) {
+        int i=0;
  while(artikli[i]!=null)i++;
 artikli[i]=a;
 

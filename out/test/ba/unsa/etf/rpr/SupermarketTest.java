@@ -4,13 +4,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+class SupermarketTest {
 
     @Test
-    void ispisArtikala() {
+    void dodajArtikl() {
     }
 
     @Test
-    void main() {
+    void izbaciArtiklSaKodom() {
+    }
+
+    @Test
+    void getArtikli() {
     }
 }
