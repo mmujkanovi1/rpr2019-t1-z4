@@ -32,11 +32,11 @@ class SupermarketTest {
     void getArtikli() {
 
         int p=supermarket.getArtikli().length;
-//assertEquals(3,p);
+
 
             assertEquals("3", supermarket.getArtikli()[0].getKod());
-         //   assertEquals(2,  supermarket.getArtikli()[1].getKod());
-          //  assertEquals(3,  supermarket.getArtikli()[2].getKod());
+          assertEquals("5",  supermarket.getArtikli()[1].getKod());
+
 
     }
 }
